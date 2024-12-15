@@ -12,5 +12,6 @@ interface RepositoryMhs {
     fun getMhs(nim : String): Flow<Mahasiswa>
     //deleteMhs
     suspend fun deleteMhs(mahasiswa: Mahasiswa)
-
+    //updateMhs
+    suspend fun updateMhs(mahasiswa: Mahasiswa)
 }
