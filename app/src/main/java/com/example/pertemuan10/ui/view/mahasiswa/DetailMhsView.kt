@@ -210,3 +210,27 @@ fun ComponentDetailMhs(
     }
 }
 
+
+@Composable
+private fun DeleteConfirmationDialog(
+    onDeleteConfirm: () -> Unit,
+    onDeleteCencel: () -> Unit,
+    modifier: Modifier = Modifier
+
+){
+    AlertDialog(onDismissRequest = { /*TODO*/ },
+        title = { Text( "Delete Data")},
+        text = { Text("Apakah anda yakin ingin mengahpus data?" )},
+        modifier = modifier,
+        dismissButton = {
+            TextButton(onClick = onDeleteCencel) {
+                Text(text = "Cencel")
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDeleteConfirm) {
+                Text(text = "Yes")
+            }
+        }
+    )
+}
